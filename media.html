@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>	
+<body>	
+<div id="header">
+    <a href="#">Главная</a><span>/</span>
+    <a href="puzzles.html">Загадки</a><span>/</span>
+    <a href="guess.hyml">Угадайка</a><span>/</span>
+    <a href="media.html">Угадайка мультиплеер</a>
+</div>
+<script>
+
+    var min=1;
+    var max=100;
+
+    // Загадываем случайное число
+    var gN = Math.floor(Math.random() * (max - min + 1)) + min;
+    document.write ("<p>Компьютер загадал число от " + min + " до " + max + ". Угадайте его за 7 попыток.</p>");
+    // игроки
+    for (var user = 1; user <= 2; user++) 
+    {
+        document.write ("<p>" + user + " игрок.</p>")
+    // Номер попытки
+            var tryCount = 1;
+            var usersAnswer;
+            do
+            {
+            usersAnswer = parseInt(prompt(user + " игрок. " + tryCount + " попытка. Ваш вариант:"));
+            while(isNaN(usersAnswer) || usersAnswer > max || usersAnswer < min)
+            {
+            usersAnswer = parseInt(prompt(user + " игрок. " + tryCount + " попытка. Ваш вариант:"));
+            }
+
+            document.write(tryCount + " попытка. " + usersAnswer + " ");
+            if (usersAnswer > gN) {
+            document.write("<b>Перелет</b><br>");
+            }
+
+            if (usersAnswer < gN) {
+            document.write("<strong>Недолет</strong><br>");
+            }
+
+    //  Увеличиваем количество попыток на единицу
+            tryCount++;
+        }
+        while (usersAnswer != gN && tryCount <= 7);
+        if (usersAnswer == gN)
+        {
+        document.write ("<br> Поздравляем! Вы угадали!");
+        }
+
+        else {
+        document.write("Вы проиграли! <br> Ответ: " + gN +".");
+        }
+    }
+
+</script>
+</body>
+</html>
