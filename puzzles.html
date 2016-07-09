@@ -1,19 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+<meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
-<script>
-
-	function Random(min, max)
-			{
-				min = parseInt(min);
-				max = parseInt(max);
-
-				return (Math.floor( Math.random() * (( max - min ) + 1)))  + min;
-			}
-
-</script>
 </head>	
 <body>	
 <div id="header">
@@ -22,18 +11,59 @@
     <a href="guess.hyml">Угадайка</a><span>/</span>
     <a href="media.html">Угадайка мультиплеер</a>
 </div>
+<script>
+	var rightAns = 0;
 
-		<p> min = <input type="text" id="txtMin" style="font-size:50px;"> </p>
-		<p> max = <input type="text" id="txtMax"> </p>
-	
-		<p> 
-			<input  type="button" 
-					value = "Жми меня"
-					onclick="textOut.value = Random(txtMin.value,txtMax.value)" 
-					> 
-		</p>
+	var name = prompt("Давайте познакомимся, меня зовут Юля и я хотела бы поиграть с Вами в загадки. А как Ваше имя?");
 		
-		<p> Random = <input type="text" id="textOut">  </p>
+	var answer1 = prompt("Что же, " +name+ " вот и первая загадка. Вспушит она свои бока, свои четыре уголка, и тебя, как ночь настанет, все равно к себе притянет.(Ответы пиши с заглавной буквы)");
+
+	if (answer1 == "Подушка")
+	{
+		rightAns++;
+		alert(name + ", твой ответ правильный. Поздравляю!");
+	}
+	else
+	{
+		alert(name + ", не растраивайся, попробуй еще!");
+	}
+
+	var answer2 = prompt("Вторая загадка. Тает снежок, ожил лужок. День прибывает. Когда это бывает?");
+
+		if (answer2 == "Весна")
+		{
+			rightAns++;
+			alert(name + ", ты опять угадал, так держать!");
+		}
+		else
+		{
+			alert("Неудача...");
+		}
+
+	var answer3 = prompt("Третья. По деревьям скок-скок, а орешки щёлк-щёлк.");
+
+		if (answer3=="Белка") 
+		{
+			rightAns++;
+			alert("Правильно!");
+		}
+		else
+		{
+			alert("Увы..." + name + ", ты ответил не правильно");
+		}
+
+	var answer4=prompt("Последняя загадка. Идет то в гору, то с горы, но остается на месте.");
+		if (answer4=="Дорога") 
+		{
+			rightAns++;
+			alert("Ты молодец, "+name);
+		}
+		else
+		{
+			alert("Опять неудача, "+name+", но ты не печалься. Ты молодец, что старался!");
+		}
+
+		alert("Отгадано загадок: "+rightAns+". Спасибо за игру, еще увидимся!");
 
 </script>
 </body>
