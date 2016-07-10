@@ -1,31 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
-</head>	
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+
+		<script>
+			function puzzles1 () 
+			{ 
+				if ( answer1.txtAns1.value == "Подушка") 
+				{
+					alert ("Правильно")
+				}
+				else
+				{
+					alert ("Увы...")
+				}
+			}	
+
+			function puzzles2 () 
+			{ 
+				if ( answer2.txtAns2.value == "Весна") 
+				{
+					alert ("Правильно")
+				}
+				else
+				{
+					alert ("Увы...")
+				}
+			}
+
+			function puzzles3 () 
+			{ 
+				if ( answer3.txtAns3.value == "Белка") 
+				{
+					alert ("Правильно")
+				}
+				else
+				{
+					alert ("Увы...")
+				}
+			}
+			
+			function puzzles4 () 
+			{ 
+				if ( answer4.txtAns4.value == "Дорога") 
+				{
+					alert ("Правильно")
+				}
+				else
+				{
+					alert ("Увы...")
+				}
+			}
+		</script>
+
+	</head>	
 <body>	
 <div id="header">
-    <a href="#">Главная</a><span>/</span>
+    <a href="index.html">Главная</a><span>/</span>
     <a href="puzzles.html">Загадки</a><span>/</span>
     <a href="guess.hyml">Угадайка</a><span>/</span>
     <a href="media.html">Угадайка мультиплеер</a>
 </div>
-<script>
+<!-- <script>
 	var rightAns = 0;
-
-	var name = prompt("Давайте познакомимся, меня зовут Юля и я хотела бы поиграть с Вами в загадки. А как Ваше имя?");
 		
-	var answer1 = prompt("Что же, " +name+ " вот и первая загадка. Вспушит она свои бока, свои четыре уголка, и тебя, как ночь настанет, все равно к себе притянет.(Ответы пиши с заглавной буквы)");
+	var answer1 = prompt("Вспушит она свои бока, свои четыре уголка, и тебя, как ночь настанет, все равно к себе притянет.(Ответы пиши с заглавной буквы)");
 
 	if (answer1 == "Подушка")
 	{
 		rightAns++;
-		alert(name + ", твой ответ правильный. Поздравляю!");
+		alert("твой ответ правильный. Поздравляю!");
 	}
 	else
 	{
-		alert(name + ", не растраивайся, попробуй еще!");
+		alert(", не растраивайся, попробуй еще!");
 	}
 
 	var answer2 = prompt("Вторая загадка. Тает снежок, ожил лужок. День прибывает. Когда это бывает?");
@@ -33,7 +83,7 @@
 		if (answer2 == "Весна")
 		{
 			rightAns++;
-			alert(name + ", ты опять угадал, так держать!");
+			alert( ", ты опять угадал, так держать!");
 		}
 		else
 		{
@@ -49,22 +99,85 @@
 		}
 		else
 		{
-			alert("Увы..." + name + ", ты ответил не правильно");
+			alert("Увы... ты ответил не правильно");
 		}
 
 	var answer4=prompt("Последняя загадка. Идет то в гору, то с горы, но остается на месте.");
 		if (answer4=="Дорога") 
 		{
 			rightAns++;
-			alert("Ты молодец, "+name);
+			alert("Ты молодец");
 		}
 		else
 		{
-			alert("Опять неудача, "+name+", но ты не печалься. Ты молодец, что старался!");
+			alert("Опять неудача, но ты не печалься. Ты молодец, что старался!");
 		}
 
 		alert("Отгадано загадок: "+rightAns+". Спасибо за игру, еще увидимся!");
 
-</script>
+</script> -->
+<div id="content">
+	<div id="box">
+		<p style="text-align: center;">Ответы пиши с заглавной буквы.</p>
+
+		<p>Вспушит она свои бока,<br>
+ 		Свои четыре уголка,<br>
+ 		И тебя, как ночь настанет,<br>
+ 		Все равно к себе притянет.<br>
+		Ответ:<br>
+		
+
+		<form name="answer1">
+		<input type="text" name="txtAns1"><br>
+		<input  type="button" 
+				value="Ответить"
+				onclick="puzzles1();">
+		</form>
+		</p>
+
+		<p>
+		Тает снежок,<br>
+		Ожил лужок. <br>
+		День прибывает.<br>
+		Когда это бывает?<br>
+		Ответ:<br>
+		
+		<form name="answer2">
+		<input type="text" name="txtAns2"><br>
+		<input  type="button" 
+				value="Ответить"
+				onclick="puzzles2();">
+		</form>
+		</p>
+
+		<p>
+		По деревьям скок-скок,<br>
+		А орешки щёлк-щёлк.<br>
+		Ответ:<br>
+		
+		<form name="answer3">
+		<input type="text" name="txtAns3"><br>
+		<input  type="button" 
+				value="Ответить"
+				onclick="puzzles3();">
+		</form>
+		</p>
+
+		<p>
+		Идет то в гору,<br>
+		То с горы,<br>
+		Но остается на месте.<br>
+		Ответ:<br>
+		
+		<form name="answer4">
+		<input type="text" name="txtAns4"><br>
+		<input  type="button" 
+				value="Ответить"
+				onclick="puzzles4();">
+		</form>
+		</p>
+
+	</div>
+</div>
 </body>
 </html>
