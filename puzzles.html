@@ -59,123 +59,84 @@
 <body>	
 <div id="header">
     <a href="index.html">Главная</a><span>/</span>
-    <a href="puzzles.html">Загадки</a><span>/</span>
-    <a href="guess.hyml">Угадайка</a><span>/</span>
+    <a href="#">Загадки</a><span>/</span>
+    <a href="guess.html">Угадайка</a><span>/</span>
     <a href="media.html">Угадайка мультиплеер</a>
 </div>
-<!-- <script>
-	var rightAns = 0;
-		
-	var answer1 = prompt("Вспушит она свои бока, свои четыре уголка, и тебя, как ночь настанет, все равно к себе притянет.(Ответы пиши с заглавной буквы)");
-
-	if (answer1 == "Подушка")
-	{
-		rightAns++;
-		alert("твой ответ правильный. Поздравляю!");
-	}
-	else
-	{
-		alert(", не растраивайся, попробуй еще!");
-	}
-
-	var answer2 = prompt("Вторая загадка. Тает снежок, ожил лужок. День прибывает. Когда это бывает?");
-
-		if (answer2 == "Весна")
-		{
-			rightAns++;
-			alert( ", ты опять угадал, так держать!");
-		}
-		else
-		{
-			alert("Неудача...");
-		}
-
-	var answer3 = prompt("Третья. По деревьям скок-скок, а орешки щёлк-щёлк.");
-
-		if (answer3=="Белка") 
-		{
-			rightAns++;
-			alert("Правильно!");
-		}
-		else
-		{
-			alert("Увы... ты ответил не правильно");
-		}
-
-	var answer4=prompt("Последняя загадка. Идет то в гору, то с горы, но остается на месте.");
-		if (answer4=="Дорога") 
-		{
-			rightAns++;
-			alert("Ты молодец");
-		}
-		else
-		{
-			alert("Опять неудача, но ты не печалься. Ты молодец, что старался!");
-		}
-
-		alert("Отгадано загадок: "+rightAns+". Спасибо за игру, еще увидимся!");
-
-</script> -->
 <div id="content">
+<h1>Загадки</h1>
+<h3 style="text-align: center;">Ответы пиши с заглавной буквы.</h3>
+	
 	<div id="box">
-		<p style="text-align: center;">Ответы пиши с заглавной буквы.</p>
-
-		<p>Вспушит она свои бока,<br>
- 		Свои четыре уголка,<br>
- 		И тебя, как ночь настанет,<br>
- 		Все равно к себе притянет.<br>
-		Ответ:<br>
+	<table>
+		<tr>
+		<td>
+			<p>Вспушит она свои бока,<br>
+ 			Свои четыре уголка,<br>
+ 			И тебя, как ночь настанет,<br>
+ 			Все равно к себе притянет.<br>
+			Ответ:<br>
 		
 
-		<form name="answer1">
-		<input type="text" name="txtAns1"><br>
-		<input  type="button" 
-				value="Ответить"
-				onclick="puzzles1();">
-		</form>
-		</p>
+			<form id="answer1">
+			<input type="text" id="txtAns1"><br>
+			<input  type="button" 
+					value="Проверить"
+					onclick="puzzles1();">
+			</form>
+			</p>
+		</td>
 
-		<p>
-		Тает снежок,<br>
-		Ожил лужок. <br>
-		День прибывает.<br>
-		Когда это бывает?<br>
-		Ответ:<br>
+		<td>
+			<p>
+			Тает снежок,<br>
+			Ожил лужок. <br>
+			День прибывает.<br>
+			Когда это бывает?<br>
+			Ответ:<br>
 		
-		<form name="answer2">
-		<input type="text" name="txtAns2"><br>
-		<input  type="button" 
-				value="Ответить"
-				onclick="puzzles2();">
-		</form>
+			<form id ="answer2">
+			<input type="text" id="txtAns2"><br>
+			<input  type="button" 
+					value="Проверить"
+					onclick="puzzles2();">
+			</form>
 		</p>
+		</td>
+		</tr>
 
-		<p>
-		По деревьям скок-скок,<br>
-		А орешки щёлк-щёлк.<br>
-		Ответ:<br>
+		<tr>
+		<td>
+			<p>
+			По деревьям скок-скок,<br>
+			А орешки щёлк-щёлк.<br>
+			Ответ:<br>
 		
-		<form name="answer3">
-		<input type="text" name="txtAns3"><br>
-		<input  type="button" 
-				value="Ответить"
-				onclick="puzzles3();">
-		</form>
-		</p>
-
-		<p>
-		Идет то в гору,<br>
-		То с горы,<br>
-		Но остается на месте.<br>
-		Ответ:<br>
+			<form id ="answer3">
+			<input type="text" id ="txtAns3"><br>
+			<input  type="button" 
+					value="Проверить"
+					onclick="puzzles3();">
+			</form>
+			</p>
+		</td>
+		<td>
+			<p>
+			Идет то в гору,<br>
+			То с горы,<br>
+			Но остается на месте.<br>
+			Ответ:<br>
 		
-		<form name="answer4">
-		<input type="text" name="txtAns4"><br>
-		<input  type="button" 
-				value="Ответить"
-				onclick="puzzles4();">
-		</form>
+			<form id ="answer4">
+			<input type="text" id="txtAns4"><br>
+			<input  type="button" 
+					value="Проверить"
+					onclick="puzzles4();">
+			</form>
 		</p>
+		</td>
+		</tr>
+	</table>
 
 	</div>
 </div>
